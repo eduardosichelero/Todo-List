@@ -50,6 +50,14 @@ button:hover {
   opacity: 1;
 }
 
+.complete {
+  background-color: #08A1FF;
+}
+
+.remove {
+  background-color: rgb(255, 55, 55);
+}
+
 .todo-form {
   padding-bottom: 1.5rem;
 }
