@@ -1,4 +1,4 @@
-# Todoo-List
+# Todo-List
  O projeto todo list foi desenvolvido utilizando React se trata de uma aplicação de lista de tarefas com design responsivo. Utiliza localStorage para persistência local, permitindo adição, remoção, conclusão, filtragem e pesquisa de tarefas. Apresenta uma interface moderna e amigável, demonstrando habilidades em React e estilos CSS, desenvolvido como estudo da linguagem.
 
 ## Principais Componentes:
