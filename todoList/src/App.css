@@ -1,30 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 1px;
+  background-color: #F29057;
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 30px;
-  color: #333;
-  background-image: url(./img/bg-light.jpg);
+  color: #ddd;
+  background-image: url(./img/bg.png);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 
-
 .app {
   max-width: 600px;
-  margin: 0 auto 300px;
-  background-color: #efefef;
+  margin: 0 auto 100px;
+  background: transparent;
+  backdrop-filter: blur(90px);
   padding: 20px 30px;
+  border: 1px solid gray;
   border-radius: 10px;
 }
 
 h1 {
   text-align: center;
+  font-size: 45px;
+  background-image: linear-gradient(0deg, #4c09aa 0%, #fa9860 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
   margin-bottom: 10px;
+  font-size: 30px;
 }
 
 p {
@@ -36,19 +58,29 @@ input {
 }
 
 button {
-  background-color: #0836FF;
+  background-color: #F29057;
   color: #fff;
-  padding: 5px 10px ;
+  padding: 5px 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: .8;
   transition: 0.3s;
   margin-right: 10px;
 }
 
+.btn-ord {
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+}
+
 button:hover {
   opacity: 1;
+}
+
+.mid-text {
+  font-size: 30px;
 }
 
 .todo-list {
@@ -58,43 +90,69 @@ button:hover {
 }
 
 .todo {
- background-color: #fff;
- box-shadow: 0 0 10px rgba (0, 0, 0, .1);
- padding: 10px;
- margin-bottom: 10px;
- border-radius: 5px;
- display: flex;
- justify-content: space-between;
- align-items: center;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo button {
+  border-radius: 10px;
+  font-size: 16.8px;
 }
 
 .complete {
-  background-color: #08A1FF;
+  background-color: #D94EB4;
 }
 
 .remove {
-  background-color: rgb(255, 55, 55);
+  background-color: #D96C80;
 }
 
 .todo-form {
   padding-bottom: 1.5rem;
 }
 
-input, select {
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
-  
+.todo-form button {
+  width: 100px;
+  height: 45px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-.filter, .search {
+input,
+select {
+  font-size: 15px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #3a3939;
+  border-radius: 5px;
+  width: 100%;
+}
+
+select {
+  text-align: center;
+}
+
+.text {
+  color: #b2aeae;
+  font-size: 20px;
+}
+
+.filter,
+.search {
   border-bottom: 1px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #555;
-
 }
 
 .filter-options {
@@ -105,4 +163,5 @@ input, select {
 
 .filter-options div {
   flex: 1 1 0;
+  text-align: center;
 }

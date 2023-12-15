@@ -7,8 +7,6 @@ const TodoForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!value || !category) return;
-
-        // Utilizando a propriedade addTodo corretamente
         props.addTodo(value, category);
 
         setValue("");
@@ -17,7 +15,7 @@ const TodoForm = (props) => {
 
     return (
         <div className='todo-form'>
-            <h2>Criar Tarefa</h2>
+            <h2 className='mid-text'>Criar Tarefa</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder='Digite o Título' value={value} onChange={(e) => setValue(e.target.value)} />
                 <select value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -26,7 +24,7 @@ const TodoForm = (props) => {
                     <option value="Estudos">Estudos</option>
                     <option value="Pessoal">Pessoal</option>
                 </select>
-                <button type="submit">Criar Tarefa</button>
+                <button className='btn-ord' type="submit">Criar Tarefa</button>
             </form>
         </div>
     );
