@@ -4,7 +4,7 @@ import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 
 function App() {
-  const [count, setCount] = useState({
+  const [todos, setTodos] = useState({
     todos: [
       {
         id: 1,
@@ -27,15 +27,45 @@ function App() {
     ]
   });
 
+  const addTodo = (text, category) => {
+    const newTodos = [
+      ...todos.todos, {
+        id: Math.floor(Math.random() * 10000),
+        text,
+        category,
+        isCompleted: false
+      }
+    ];
+    setTodos({ todos: newTodos });
+  }
+
+  const removeTodo = (id) => {
+    const newTodos = [...todos.todos];
+    const filteredTodos = newTodos.filter(todo => todo.id !== id);
+    setTodos({ todos: filteredTodos });
+  }
+  
+  const completeTodo = (id) => {
+    const newTodos = [...todos.todos];
+    setTodos({
+      todos: newTodos.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+      ),
+    });
+  };
+  
+
+
+
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
-         {count.todos.map((todo) => (
-          <Todo todo={todo}/>
+         {todos.todos.map((todo) => (
+          <Todo key={todo.id} todo={todo} removeTodo = {removeTodo}  completeTodo = {completeTodo} />
          ))}
       </div>
-      <TodoForm/>
+      <TodoForm addTodo={addTodo} />
     </div>
   );
 }

@@ -25,6 +25,7 @@ h1 {
 
 h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 p {
@@ -44,10 +45,30 @@ button {
   cursor: pointer;
   opacity: 0.9;
   transition: 0.3s;
+  margin-right: 10px;
 }
 
 button:hover {
   opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 'px solid #555';
+
+}
+
+
+.todo {
+ background-color: #fff;
+ box-shadow: 0 0 10px rgba (0, 0, 0, .1);
+ padding: 10px;
+ margin-bottom: 10px;
+ border-radius: 5px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .complete {
