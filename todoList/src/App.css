@@ -25,7 +25,6 @@ h1 {
 
 h2 {
   margin-bottom: 10px;
-  text-align: center;
 }
 
 p {
@@ -55,10 +54,8 @@ button:hover {
 .todo-list {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 'px solid #555';
-
+  border-bottom: 1px solid #555;
 }
-
 
 .todo {
  background-color: #fff;
@@ -89,4 +86,23 @@ input, select {
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 100%;
+  
+}
+
+.filter, .search {
+  border-bottom: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
 }
